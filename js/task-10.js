@@ -9,8 +9,8 @@ const boxesEl = document.querySelector("#boxes");
 
 function createBoxes(amount) {
   const arrSizes = [];
+  let size = 20;
   for (let i = 0; i < amount; i++) {
-    let size = 20;
     arrSizes.push({ size: (size += 10), color: getRandomHexColor() });
   }
 
