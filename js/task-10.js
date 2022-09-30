@@ -26,7 +26,6 @@ function createBoxes(amount) {
 }
 
 createEl.addEventListener("click", () => {
-  console.log("inputEl.value", inputEl.value);
   createBoxes(parseInt(inputEl.value));
 });
 
