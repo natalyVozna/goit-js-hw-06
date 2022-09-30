@@ -8,21 +8,21 @@ const destroyEl = document.querySelector("button[data-destroy]");
 const boxesEl = document.querySelector("#boxes");
 
 function createBoxes(amount) {
-  const arrSizes = [];
+  const arrDivs = [];
   let size = 20;
+
   for (let i = 0; i < amount; i++) {
-    arrSizes.push({ size: (size += 10), color: getRandomHexColor() });
+    size += 10;
+    const divEl = document.createElement("div");
+    divEl.style.width = size + "px";
+    divEl.style.height = size + "px";
+    divEl.style.marginBottom = "10px";
+    divEl.style.backgroundColor = getRandomHexColor();
+
+    arrDivs.push(divEl);
   }
 
-  const markup = arrSizes
-    .map(
-      ({ size, color }) =>
-        `<div style="background-color: ${color}; width:${size}px; height:${size}px; margin-bottom:10px"></div>`
-    )
-    .join("");
-
-  console.log(markup);
-  boxesEl.innerHTML = markup;
+  boxesEl.append(...arrDivs);
 }
 
 createEl.addEventListener("click", () => {
