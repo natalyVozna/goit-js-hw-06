@@ -7,7 +7,7 @@ const createEl = document.querySelector("button[data-create]");
 const destroyEl = document.querySelector("button[data-destroy]");
 const boxesEl = document.querySelector("#boxes");
 
-function createBoxes(amount) {
+function createBoxesWithDivs(amount) {
   const arrDivs = [];
   let size = 20;
 
@@ -26,7 +26,7 @@ function createBoxes(amount) {
 }
 
 createEl.addEventListener("click", () => {
-  createBoxes(parseInt(inputEl.value));
+  createBoxesWithDivs(parseInt(inputEl.value));
 });
 
 destroyEl.addEventListener("click", () => {

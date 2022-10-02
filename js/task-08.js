@@ -14,6 +14,9 @@ function handleSubmit(event) {
     alert("Please fill in all the fields!");
   }
 
+  // const formData = new FormData(event.currentTarget);
+  // formData.forEach((name, val) => userData[val] = name)
+
   userData.email = email.value;
   userData.password = password.value;
 
