@@ -23,18 +23,20 @@ button {
   cursor: pointer;
 }
 
-.list-item {
-  list-style: none;
-}
-
 .gallery {
   display: flex;
-  flex-direction: column;
   gap: 20px;
+}
+
+.list-item {
+  list-style: none;
+  display: flex;
+  width: calc((100% - 40px) / 3);
+  height: 250px;
 }
 
 .list-item img {
   display: block;
-  width: 400px;
+  max-width: 100%;
   height: auto;
 }
