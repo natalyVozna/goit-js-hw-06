@@ -12,15 +12,11 @@ function handleSubmit(event) {
 
   if (email.value === "" || password.value === "") {
     alert("Please fill in all the fields!");
+  } else {
+    userData.email = email.value;
+    userData.password = password.value;
+
+    console.log(userData);
+    event.currentTarget.reset();
   }
-
-  // const formData = new FormData(event.currentTarget);
-  // formData.forEach((name, val) => userData[val] = name)
-
-  userData.email = email.value;
-  userData.password = password.value;
-
-  console.log(userData);
-
-  event.currentTarget.reset();
 }
