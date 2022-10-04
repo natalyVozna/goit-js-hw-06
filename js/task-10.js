@@ -9,13 +9,18 @@ const boxesEl = document.querySelector("#boxes");
 
 function createBoxesWithDivs(amount) {
   const arrDivs = [];
-  let size = 20;
+  const arrBoxDivs = boxesEl.querySelectorAll("div");
+  let size =
+    arrBoxDivs.length > 0
+      ? +arrBoxDivs[arrBoxDivs.length - 1].dataset.size
+      : 20;
 
   for (let i = 0; i < amount; i++) {
     size += 10;
     const divEl = document.createElement("div");
     divEl.style.width = size + "px";
     divEl.style.height = size + "px";
+    divEl.dataset.size = size;
     divEl.style.marginBottom = "10px";
     divEl.style.backgroundColor = getRandomHexColor();
 
